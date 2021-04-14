@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,30 +8,50 @@
     <title>Homework 9B Exercise 1</title>
     <link rel="stylesheet" href="/CSS/styles.css">
 </head>
+
 <body>
     <h1><a href="./index.html">Link to Start Page</a></h1>
     <h2>Sample form</h2>
     <h3>View console to see JavaScript output</h3>
     <form action="action.py" target="_blank" method="POST">
-    Name: <input type="text" name="Name" placeholder="Name"><br>
-    Email: <input type="text" name="Email" placeholder="name@domain">
-    <br>
-    Payment Type: <br>
-    <input type="radio" name="pmt" value="cash">Cash<br>
-    <input type="radio" name="pmt" value="credit">Credit card<br>
-    <input type="radio" name="pmt" value="debit">Google Pay <br>
-    <input type="radio" name="pmt" value="debit">Amazon Pay <br>
-    <br>
-    <input type="checkbox"> Sign me up for special promotions <br>
-    Preferred Location: <select name="location">
-    <option value="location 1">Los Angeles</option> <br>
-    <option value="location 1">Orange County</option>
-    <option value="location 1">Riverside</option>
-    <option value="location 1">San Diego</option>
-    </select>
-    <br>
-    <input type="submit" name="submit">
-    <input type="reset" name="cancel">
+        <p>
+            <label for="name">Name</label>:
+            <input type="text" name="name" id="name" required>
+        </p>
+        <p>
+            <label for="email">Email</label>:
+            <input type="email" name="email" id="email" required>
+        </p>
+
+        <p>
+            <label for="payment">Payment Type</label>:
+            <br>
+            <input type="radio" value="Cash" name="payment" required> Cash
+            <br>
+            <input type="radio" value="CC" name="payment" required> Credit Card
+            <br>
+            <input type="radio" value="gpay" name="payment" required> Google Pay
+            <br>
+            <input type="radio" value="apple pay" name="payment" required> Apple Pay
+        </p>
+        <p>
+            <label><input type="checkbox" name="checkbox" id="value">Sign me up for special promotions</label>
+        </p>
+        <p>
+            <label for="country">Preferred Location</label>:
+            <select id="country">
+                <option value="LA">Los Angeles</option>
+                <option value="OC">Orange County</option>
+                <option value="RS">Riverside</option>
+                <option value="SD">San Diego</option>
+            </select>
+        </p>
+        <button type="button" value="Submit" onclick="fetchAndSetData();">Submit</button>
+        <button type="reset" value="Reset">Cancel</button>
     </form>
+    <div id="result"></div>
+
+    <script src="../public/ex1.js"></script>
 </body>
+
 </html>

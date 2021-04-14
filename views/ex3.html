@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,22 @@
     <title>Homework 9B Exercise 3</title>
     <link rel="stylesheet" href="/CSS/styles.css">
 </head>
+
 <body>
     <h1><a href="./index.html">Link to Start Page</a></h1>
     <h2>Homework 9B Exercise 3</h2>
+    <h1>Mihir's Article/Form Solution</h1>
+    <h3>Add new Article</h3>
+    <form action="/action_page.php">
+        Title: <input type="text" name="Title"><br>
+        Content: <br>
+        <textarea name="comment"></textarea><br>
+        <button type="button" value="Submit" onclick="fetchAndSetData();">Add</button>
+    </form>  
+
+    <script src=" ../public/ex3.js"></script>
+
+            <div id="articles"></div>
 </body>
+
 </html>
